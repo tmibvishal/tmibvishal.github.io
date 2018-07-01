@@ -307,7 +307,9 @@ text-align: center;
     left: 50%;
 
 }
-
+.justpadding{
+    padding:20px;
+}
 
 
 @media screen and (max-width: 900px){
@@ -346,8 +348,12 @@ text-align: center;
     }
     .box3copy{
         width: 100%;
+        padding: 0px;
     }
     .card{
         padding: 10px;
+    }
+    .justpadding{
+        padding:0px;
     }
 }
