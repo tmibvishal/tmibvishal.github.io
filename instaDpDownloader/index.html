@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insta Full DP Viewer</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="instaHDFullImage.js"></script>
+    <script>
+        $(document).ready(function() {
+            let textBox = $('#textBox');
+            let btnSubmit = $('#btnSubmit');
+            btnSubmit.click(function () {
+                    //console.log(hdImage(textBox.val()));
+                hdImage(textBox.val(),function(hdimage){
+                    let imgParent = $('#imgParent');
+                    let value = `<img src="${hdimage}" style="Width:400px;">`;
+                    imgParent.text("");
+                    imgParent.append(value);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<main>
+    <p style="margin: 20px;">
+    <h2>Algorith for my program</h2>
+    <strong>1. </strong> Visit this page after replacing name with username of insta that you are looking for. <a
+        href="http://stackoverflow.com">https://apinsta.herokuapp.com/u/name</a>.
+    Source: <a href="http://stackoverflow.com">stackoverflow.com</a>
+    <br>
+    <strong> 2.</strong> This is a JSON-Code file. You need to search for the user-id: graphql->user->id
+    <br>
+    <strong> 3.</strong> Visit this API-Page of instagram <a href="http://stackoverflow.com">https://i.instagram.com/api/v1/users/user-id/info/</a>
+    and replace user-id
+    with the id from step 2
+    <br>
+    <strong> 4.</strong> This is a JSON-Code. Search for the link: user->hd_profile_pic_url_info->url This is the
+    full size image.
+    <br>
+    </p>
+    <p>
+        <input type="text" id="textBox">
+        <input type="submit" id="btnSubmit"></input>
+    <div id="imgParent"></div>
+    </p>
+</main>
+</body>
+</html>
