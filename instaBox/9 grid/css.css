@@ -50,6 +50,12 @@ head1 {
     height: 221px;
 }
 
+.container2{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+
 @media screen and (max-width: 700px) {
     .container {
         width: 100%;
@@ -67,5 +73,9 @@ head1 {
     .nine-grid-container  img{
         padding: 2.5px;
         height: 33vw;
+    }
+
+    .container2 img{
+        width: 80%;
     }
 }
