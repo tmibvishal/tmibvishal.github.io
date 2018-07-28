@@ -4,7 +4,8 @@ function imgCrop() {
     image.cropper({
         aspectRatio: 3 / 1,
         zoomOnTouch: false,
-        zoomOnWheel: false
+        zoomOnWheel: false,
+		dragMode: false
     });
 }
 
