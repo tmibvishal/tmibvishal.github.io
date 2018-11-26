@@ -19,10 +19,11 @@ body{
 }
 
 .navigation>ul>li>a{
-    padding: 10px;
-    text-decoration: none;
-    color: grey;
-}
+     padding: 10px;
+     text-decoration: none;
+     color: grey;
+ }
+
 .navigation>ul>li>a:hover{
     color: black;
 }
