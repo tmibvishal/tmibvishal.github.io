@@ -27,7 +27,7 @@ window.onload = function () {
 <strong>Channel:</strong> ${jsonfile["videoAuthor"]} <br>`;
             if (jsonfile["videoViews"] != null)
                 str += `<strong>Views:</strong> ${jsonfile["videoViews"]} <br>`;
-            str += `<img src="${jsonfile["videoThumbURL"]}" width="355" height="200"> <br><br> <strong>Commonly used Available Formats</strong><br> <div style="margin: 10px;"><select>`;
+            str += `<br> <div class="crop"><img src="${jsonfile["videoThumbURL"]}" width="355"></div>  <br><br> <strong>Commonly used Available Formats</strong><br> <div style="margin: 10px;"><select>`;
 
             let commonlyUsedAvailableFormats = jsonfile["commonlyUsedAvailableFormats"];
             commonlyUsedAvailableFormats.forEach(function (item) {
@@ -41,7 +41,27 @@ window.onload = function () {
                 str+= `</option>`;
             });
 
-            str += `</select></div>`;
+            str += `</select><br><button>Download</button></div>`;
+
+
+            //for all formats
+            str += `<br><br> <strong>All available Video (without Audio) and Audio Formats </strong><br> <div style="margin: 10px;"><select>`;
+
+            let allAvailableFormats = jsonfile["remainingFormats"];
+            allAvailableFormats.forEach(function (item) {
+
+                str+= `<option value="${item["url"]}">${item["quality"]} ${item["type"]}`;
+
+                if (item["size"] != "0MB") {
+                    str+= ` (${item["size"]})`;
+                }
+
+                str+= `</option>`;
+            });
+
+            str += `</select><br><button>Download</button></div>`;
+
+
             DOMtitle.innerHTML = str;
             parent.innerText = "";
             parent.appendChild(DOMtitle);
