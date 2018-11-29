@@ -108,6 +108,9 @@ body {
     transform: translateX(0);
 }
 
+#video{
+    margin: 10px;
+}
 @keyframes flip {
     0% {
         height: 0px;
