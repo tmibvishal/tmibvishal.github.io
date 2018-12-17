@@ -2,7 +2,10 @@ body{
     margin: 0px;
     font-size: 1.3rem;
     font-family: 'PT Sans', sans-serif;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 10a0edd01913da14e615c22b390e6db2faa66476
 }
 
 .head{
@@ -20,10 +23,18 @@ body{
 }
 
 .navigation>ul>li>a{
+<<<<<<< HEAD
     padding: 10px;
     text-decoration: none;
     color: grey;
 }
+=======
+     padding: 10px;
+     text-decoration: none;
+     color: grey;
+ }
+
+>>>>>>> 10a0edd01913da14e615c22b390e6db2faa66476
 .navigation>ul>li>a:hover{
     color: black;
 }
